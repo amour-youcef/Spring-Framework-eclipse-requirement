@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- bean definitions here -->
+
+	<bean id='add' class='com.spring.test.Addresses'>
+		<constructor-arg value='+33 6 86 06 23 52'></constructor-arg>
+		<constructor-arg value='Amour.youssouf@gmail.com'></constructor-arg>
+		<constructor-arg value='france'></constructor-arg>
+		<constructor-arg value='Belfort'></constructor-arg>
+		<constructor-arg value='50000'></constructor-arg>
+	</bean>
+
+	<bean id='p' class='com.spring.test.Person'>
+		<constructor-arg value='109' type='int'></constructor-arg>
+		<constructor-arg value='Youcef'></constructor-arg>
+		<constructor-arg ><ref bean='add'/></constructor-arg>
+	</bean>
+
+</beans>

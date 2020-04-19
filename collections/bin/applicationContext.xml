@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- bean definitions here -->
+
+	<bean id='p' class='com.spring.test.Person'>
+		
+		<constructor-arg value='109' type='int'></constructor-arg>
+		<constructor-arg value='Youcef'></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>Java is my love</value>
+				<value>JavaScript is my love</value>
+				<value>PHP is my love</value>
+				<value>HTML is my love</value>
+				<value>CSS is my love</value>
+				<value>Bootstrap is my love</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>
