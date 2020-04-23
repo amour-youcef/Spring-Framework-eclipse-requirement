@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- bean definitions here -->
+
+	<bean id='p' class='com.spring.test.Person'>
+		<property name='id' value='1000'></property>
+		<property name='personName' value='mohammed'></property>
+		<property name='add' ref='add'></property>
+	</bean>
+	
+	<bean id='add' class='com.spring.test.Addresses'>
+		<property name='phone' value='+33 6 86 06 23 52'></property>
+		<property name='email' value='amour.youssouf@gmail.com'></property>
+		<property name='country' value='Algerie'></property>
+		<property name='city' value='chlef'></property>
+		<property name='streetNo' value='Eninerr'></property>
+	</bean>
+	
+
+
+</beans>

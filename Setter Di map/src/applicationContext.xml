@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- bean definitions here -->
+
+	<bean id='p' class='com.spring.test.Person'>
+		<property name='id' value='1000'></property>
+		<property name='personName' value='mohammed'></property>
+		<property name="map">
+			<map>
+				<entry key="Country" value="Iraq"></entry>
+				<entry key="City" value="Kirkuk"></entry>
+				<entry key="Stree No" value="12345"></entry>
+				<entry key="phone" value="+33 6 86 06 23 52 "></entry>
+				<entry key="Email" value="muhammed@gmail.com "></entry>
+			</map>
+		</property>
+	</bean>
+	
+</beans>

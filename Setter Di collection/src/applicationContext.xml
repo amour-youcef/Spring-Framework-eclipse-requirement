@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- bean definitions here -->
+
+	<bean id='p' class='com.spring.test.Person'>
+		<property name='id' value='1000'></property>
+		<property name='personName' value='mohammed'></property>
+		<property name="list">
+			<list>
+				<value>123</value>
+				<value>45678</value>
+				<value>125678</value>
+				<value>12348</value>
+			</list>
+		</property>
+	</bean>
+	
+</beans>
