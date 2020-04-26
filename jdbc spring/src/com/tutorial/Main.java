@@ -12,10 +12,13 @@ public class Main {
 		
         Databaseinfo di = (Databaseinfo)conx.getBean("dbi");
 	    
+//        int ins = di.insertPerson(new Person("Youcef","Essa",32,"Iraq",330608602));
+        
         int ins = di.insertPerson(new Person("Youcef","Essa",32,"Iraq",330608602));
         
-//		System.out.println(ins);
+		System.out.println(ins);
         
+		
         System.out.println("ok");
 	}
 
