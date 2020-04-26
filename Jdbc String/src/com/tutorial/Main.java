@@ -6,11 +6,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
 
 	public static void main(String[] args) {
-		
 		// TODO Auto-generated method stub
 		
-          ApplicationContext conx = new ClassPathXmlApplicationContext("application.xml");
-		 
+		ApplicationContext ctx=new ClassPathXmlApplicationContext("applicationContext.xml");
+
           
 //        Databaseinfo di = (Databaseinfo)conx.getBean("dbi");
 	     

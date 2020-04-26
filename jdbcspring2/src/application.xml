@@ -6,15 +6,20 @@
                         http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- bean definitions here -->
 
-	<bean id='data' class='org.springframework.jdbc.datasource.DriverManagerDataSource'>
-		<property name='driverClassName' value='com.mysql.jdbc.Driver'></property>
+	
+	<bean id="data" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+		<property name='driverClassName' value='com.mysql.jdbc.Driver'></property> 
 		<property name='url' value='jdbc:mysql://localhost/spring'></property>
 		<property name='username' value='root'></property>
 		<property name='password' value=''></property>
-	</bean>
-
-
-  
-
+   </bean> 
+	 
+   <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">  
+        <property name="dataSource" ref="data"></property>  
+   </bean>  
+ 
+	<bean id="dbi" class="com.tutorial.Databaseinfo">  
+			<property name="jdbcTemplate" ref="jdbcTemplate"></property>  
+    </bean> 
 
 </beans>
