@@ -25,23 +25,22 @@ public class Databaseinfo {
 		return jdbcTemplate.update(insertData);
 	}
 	
-//	public int updatePerson(Person p) {
-//		String updateData = "UPDATE person SET ('fname','lname','age','address','phone')VALUES ("+
-//				                                  "'fname'=" + p.getFname()
-//				                                  +",'lname'=" + p.getLname()   
-//				                                  +",'age'=" + p.getAge()     
-//				                                  +",'address'=" + p.getAddress() 
-//				                                  +",'phone'=" + p.getPhone()   + "WHERE id=" +p.getId()+ ")";
-//		
-//		return template.update(updateData);
-//	}
+	public int updatePerson(Person p) {
+		String updateData = "update  person set id='" + p.getId()
+				                           +"',fname='" + p.getFname()
+				                           +"',lname='" + p.getLname()   
+				                           +"',age='"   + p.getAge()     
+				                           +"',address='" + p.getAddress() 
+				                           +"',phone='" + p.getPhone() +"' where id="+p.getId();
+		                                                                
+		return jdbcTemplate.update(updateData);
+	}
 	
-//	public int deletePerson(Person p) {
-//		
-//		String deleteData = "DELETE FROM 'person' WHERE id="+p.getId()+  ")";
-//		
-//		return template.update(deleteData);
-//	}
-//	
+	public int deletePerson(Person p) {
+		
+		String deleteData = "delete from person where id='"+p.getId()+"' ";
+		return jdbcTemplate.update(deleteData);
+	}
+	
 	
 }

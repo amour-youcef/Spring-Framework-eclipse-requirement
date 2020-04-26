@@ -14,7 +14,15 @@ public class Main {
 	    
 //        int ins = di.insertPerson(new Person("Youcef","Essa",32,"Iraq",330608602));
         
-        int ins = di.insertPerson(new Person("Youcef","Essa",32,"Iraq",330608602));
+        Person p = new Person();
+        
+//        p.setId(4);
+//        
+//        int ins = di.deletePerson(p);
+        
+//      p.setId(2);
+      
+      int ins = di.updatePerson(new Person(2,"YoucefU","UEssa",32,"UIraq",330608602));
         
 		System.out.println(ins);
         

@@ -10,6 +10,21 @@ public class Person {
 	private int phone;
 	
 	
+	public Person() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Person(int id, String fname, String lname, int age, String address, int phone) {
+		super();
+		this.id = id;
+		this.fname = fname;
+		this.lname = lname;
+		this.age = age;
+		this.address = address;
+		this.phone = phone;
+	}
+
 	public Person(String fname, String lname, int age, String address, int phone) {
 		super();
 		this.fname = fname;
