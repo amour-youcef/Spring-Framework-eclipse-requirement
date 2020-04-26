@@ -8,11 +8,11 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-        ApplicationContext conx = new ClassPathXmlApplicationContext("application.xml");
+        ApplicationContext conx = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-//        Databaseinfo di = (Databaseinfo)conx.getBean("dbi");
+        Databaseinfo di = (Databaseinfo)conx.getBean("dbi");
 	    
-//		int ins = di.insertPerson(new Person("Youcef","Essa",32,"Iraq",330608602));
+        int ins = di.insertPerson(new Person("Youcef","Essa",32,"Iraq",330608602));
         
 //		System.out.println(ins);
         

@@ -13,12 +13,12 @@
 		<property name='password' value=''></property>
 	</bean>
 
-	<bean id='Template' class='org.springframework.jdbc.core.JdbcTemplate'>
+	<bean id='jdbcTemplate' class='org.springframework.jdbc.core.JdbcTemplate'>
 		<property name='data' ref='data'></property>
 	</bean>
   
 	<bean id='dbi' class='com.tutorial.Databaseinfo'>
-		<property name='Template' value='Template'></property>
+		<property name='jdbcTemplate' ref='jdbcTemplate'></property>
 	</bean>
 
 </beans>
