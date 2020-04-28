@@ -1,5 +1,7 @@
 package com.tutorial;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,6 +16,12 @@ public class Main {
 	    
           di.insertPerson(new Person("Youcefp","Essap",32,"Iraqp",330608602));
         
+          List<Person> list = di.viewAll();
+          
+          for (Person person : list) {
+			System.out.println(person.display());
+		}
+          
 //        Person p = new Person();
         
 //        p.setId(4);

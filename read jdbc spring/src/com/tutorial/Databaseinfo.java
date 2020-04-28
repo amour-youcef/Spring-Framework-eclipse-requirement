@@ -54,7 +54,7 @@ public class Databaseinfo {
 	}
 	
 	public List <Person> viewAll(){
-		String readData = "select * from 'person'";  
+		String readData = "select * from person";  
 
 		return jdbcTemplate.query(readData, new RowMapper<Person>() {
 
@@ -62,8 +62,13 @@ public class Databaseinfo {
 			public Person mapRow(ResultSet rs, int rownum) throws SQLException {
 				// TODO Auto-generated method stub
 				Person p = new Person();
-				p.setId(id);
-				return null;
+				p.setId(rs.getInt(1));
+				p.setFname(rs.getString(2));
+				p.setLname(rs.getString(3));
+				p.setAge(rs.getInt(4));
+				p.setAddress(rs.getString(5));
+				p.setPhone(rs.getInt(6));
+				return p;
 			}
 		});
 	}
