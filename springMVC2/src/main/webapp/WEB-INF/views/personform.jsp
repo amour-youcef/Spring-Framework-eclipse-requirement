@@ -15,8 +15,36 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
 	integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
 	crossorigin="anonymous"></script>
-	
-	
-	<%@ taglib uri='http://www.springframework.org/tags/form' prefix='form'%>
-	<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c' %>
-	
+
+
+<%@ taglib uri='http://www.springframework.org/tags/form' prefix='form'%>
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
+
+<div class='container'>
+	<div class='jumbotron'>
+		<form:form method='post' action='addperson' class='form-group'>
+			<table class=table-bordered width='100%'>
+				<tr>
+					<td>id :</td>
+					<td><form:input path='id' class='form-control' /></td>
+				</tr>
+				<tr>
+					<td>Name :</td>
+					<td><form:input path='name' class='form-control' /></td>
+				</tr>
+				</tr>
+				<tr>
+					<td>Age :</td>
+					<td><form:input path='age' class='form-control' /></td>
+				</tr>
+				<tr>
+					<td>Address :</td>
+					<td><form:input path='address' class='form-control' /></td>
+				</tr>
+				<tr>
+					<td colspan='2'><input type='submit' value='submit' class='form-control' /></td>
+				</tr>
+			</table>
+		</form:form>
+	</div>
+</div>
