@@ -21,9 +21,7 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
+	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView personForm() {
 	
@@ -31,7 +29,7 @@ public class HomeController {
 		return new ModelAndView("personform","command",new Person());
 	}
 	
-	@RequestMapping(value = "/addperson", method = RequestMethod.GET)
+	@RequestMapping(value = "/addperson", method = RequestMethod.POST)
 	public ModelAndView addperson(@ModelAttribute("p")Person p) {
 	
 		System.out.println(p.getId()+" "+p.getName()+" "+p.getAge()+" "+p.getAge()+" "+p.getAddress());

@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
- <a href='personform'>personform</a>
+  <a href='personform'>personform</a>
   <a href='viewperson'>viewform</a>
 </body>
 </html>
