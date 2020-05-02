@@ -35,7 +35,9 @@ public class HomeController {
 	public ModelAndView viewemp() {
 		 
 		List<Person> list = di.viewAll();
-
+//        for (Person p : list) {
+//			System.out.println(p.getId());
+//		}
 		return new ModelAndView("viewperson","list",list);
 	}
 }
