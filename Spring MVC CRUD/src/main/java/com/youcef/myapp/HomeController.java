@@ -44,11 +44,7 @@ public class HomeController {
 	
 	@RequestMapping("/editperson/{id}")
 	public ModelAndView edit(@PathVariable int id) {
-		 
-		List<Person> list = di.viewAll();
-//        for (Person p : list) {
-//			System.out.println(p.getId());
-//		}
-		return new ModelAndView("viewperson","list",list);
+		 Person p = di.personById(id);
+		return new ModelAndView("redirect:/viewperson");
 	}
 }

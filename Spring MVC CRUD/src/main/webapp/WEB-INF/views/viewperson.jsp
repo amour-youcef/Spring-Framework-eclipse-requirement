@@ -62,5 +62,48 @@
 	</nav>
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	<div class="container">
+	<h1>All Person</h1>
+	<table width="100%" class="table-bordered active">
+		<tr><th>Id</th><th>Firste name</th><th>last name</th><th>Age</th><th>height</th><th>weight</th><th>gender</th><th>phone</th><th>email</th><th>city</th><th>country</th></tr>
+		<c:forEach var="p" items="${list}">
+			<tr>
+				<td>${p.id}</td>
+				<td>${p.fname}</td>
+				<td>${p.lname}</td>
+				<td>${p.age}</td>
+				<td>${p.height}</td>
+				<td>${p.weight}</td>
+				<td>${p.gender}</td>
+				<td>${p.phone}</td>
+				<td>${p.email}</td>
+				<td>${p.city}</td>
+				<td>${p.country}</td>
+				<td><a href='editperson/${p.id }' class='btn btn-primary'>Edite</a></td>
+				<td><a href='deleteperson/${p.id }' class='btn btn-danger'>Delete</a></td>
+			</tr>
+		</c:forEach>
+	</table>
+	</div><!--  fin container-->
+	
 </body>
 </html>
