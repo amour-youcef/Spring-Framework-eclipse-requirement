@@ -43,25 +43,5 @@
 		</div>
 	</div>
 </nav>
-
-<div class='container theme-showcase' role='main'>
-	<!-- Main jumbotron for a primary marketing message or call to action -->
-	<div class='jumbotron'>
-		<div class='row'>
-			<div class='col-sm-12'>
-				<h1>Person information</h1>
-				
-			</div><!-- fin col-sm-12 -->
-		</div><!-- fin row -->
-	</div><!-- fin jumbotron -->
-	<div class='page-header'>
-		<div class="row">
-			<div class='col-sm-12'>
-				<a href='/crud/addperson' class='btn btn-success btn-lg'><i class='fa fa-user fa-1x'> Add Person</a>
-				<a href='/crud/views' class='btn btn-success btn-lg'><i class='fa fa-user fa-1x'> View Person</a>
-			</div><!-- fin col-sm-12 -->
-		</div>
-	</div><!--Fin page heaser  -->
-</div><!--fin container  -->
 </body>
 </html>
