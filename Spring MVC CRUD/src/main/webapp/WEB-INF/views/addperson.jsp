@@ -1,12 +1,82 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page session="false"%>
+ !-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-// W3C// DTD HTML 4.01  
+ Transitional// EN" "http:// www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Add Person</title>
 </head>
 <body>
-
-	<nav class='navbar navbar-inverse'>
+	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	<div class='container' class='form-group'>
+	<h1>Add Person</h1>
+	<div class="form-group">
+	
+		<form:form method="post" action ="save">
+			<table class='table-striped' class='table'>
+				<tr>
+					<td>First name:</td>
+					<td> 
+						<form:input path="fname" class='form-control'/>
+					</td>
+				</tr>
+				<tr>
+					<td>Last name:</td>
+					<td><form:input path='lname' class='form-control'/></td>
+				</tr>
+				<tr>
+					<td>Age:</td>
+					<td><form:input path='age' class='form-control'/></td>
+				</tr>
+				<tr>
+					<td>height:</td>
+					<td><form:input path='height' class='form-control'/></td>
+				</tr>
+				<tr>
+					<td>weight:</td>
+					<td><form:input path='weight' class='form-control'/></td>
+				</tr>
+				<tr>
+					<td>gender:</td>
+					<td><form:input path='gender' class='form-control'/></td>
+				</tr>
+				<tr>
+					<td>phone:</td>
+					<td><form:input path='phone' class='form-control'/></td>
+				</tr>
+				<tr>
+					<td>email::</td>
+					<td><form:input path='email' class='form-control'/></td>
+				</tr>
+				<tr>
+					<td>city:</td>
+					<td><form:input path='city' class='form-control'/></td>
+				</tr>
+				<tr>
+					<td>country:</td>
+					<td><form:input path='country' class='form-control'/></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type='submit' value='Save'
+						class='btn btn-primary btn-lg' /></td>
+				</tr>
+			</table>
+		</form:form>
+	</div><!-- fin form-group -->
+	
+	
+	
+	
+		<nav class='navbar navbar-inverse'>
 		<div class='container-fluid'>
 			<!--Barand and toggle get grouped for better mobile display  -->
 			<div class="navbar-header">
@@ -42,37 +112,10 @@
 			</div>
 			<!-- fin collapse-->
 		</div>
-		<!-- fin container -->
-	</nav>
+		<!-- fin container --> </nav>
 
-	<form:form>
-		<table>
-			<tr>
-				<td>First name:</td>
-				<td><form:input path='fname' class='form-control'>
-						</form></td>
-			</tr>
-			<tr>
-				<td>Last name:</td>
-				<td><form:input path='lname' class='form-control'>
-						</form></td>
-			</tr>
-			<tr>
-				<td>Age:</td>
-				<td><form:input path='age' class='form-control'>
-						</form></td>
-			</tr>
-			<tr>
-				<td>height:</td>
-				<td><form:input path='height' class='form-control'>
-						</form></td>
-			</tr>
-			
-			<tr>
-				<td></td>
-				<td> <input type='submit' value='Save' class='btn btn-primary btn-lg'/></td>
-			</tr>
-		</table>
-		</form>
+	
+		
+	</div><!-- fin container -->
 </body>
 </html>
