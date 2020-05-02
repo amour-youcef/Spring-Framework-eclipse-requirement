@@ -28,6 +28,7 @@ public class Databaseinfo {
 		return template.update(insertData);
 	}
 	
+	
 //	public int updatePerson(Person e) {
 //	String query = "update employee set name='" + e.getName() + "',salary='" + e.getSalary() + "' where id='"
 //			+ e.getId() + "' ";
