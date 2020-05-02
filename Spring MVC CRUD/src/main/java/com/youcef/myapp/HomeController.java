@@ -47,4 +47,10 @@ public class HomeController {
 		 Person p = di.personById(id);
 		return new ModelAndView("redirect:/viewperson");
 	}
+	/* It update model object*/
+	@RequestMapping(value="/udperson",method=RequestMethod.POST)
+	public ModelAndView editsave(@ModelAttribute("p") Person p) {
+		di.updatePerson(p);
+		return new ModelAndView("redirect:/viewperson");
+	}
 }

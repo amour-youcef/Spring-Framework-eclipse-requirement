@@ -69,4 +69,9 @@ public class Databaseinfo {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	public void updatePerson(Person p) {
+		// TODO Auto-generated method stub
+		
+	}
 }
