@@ -115,6 +115,9 @@
 			<td>country</td>
 			<td><form:hidden path="country"/></td>
 		</tr>
+		<tr>
+		<td>	<input type="submit" value="submit" class="btn btn-success"></input> </td>
+		</tr>
 	</table>
 </form:form>
 </body>
