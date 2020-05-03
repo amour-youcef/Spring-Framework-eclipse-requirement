@@ -29,11 +29,21 @@ public class Databaseinfo {
 	}
 	
 	
-//	public int updatePerson(Person e) {
-//	String query = "update employee set name='" + e.getName() + "',salary='" + e.getSalary() + "' where id='"
-//			+ e.getId() + "' ";
-//	return jdbcTemplate.update(query);
-//}
+	public void updatePerson(Person p) {
+		// TODO Auto-generated method stub
+		String updateData="update person set" +
+				"fname="+"'"+p.getFname()+"'"+","+
+				"lname="+"'"+p.getLname()+"'"+","+
+				"age="+"'"+p.getAge()+"'"+","+
+				"height="+"'"+p.getHeight()+"'"+","+
+				"waight="+"'"+p.getWeight()+"'"+","+
+				"gender="+"'"+p.getGender()+"'"+","+
+				"email="+"'"+p.getEmail()+"'"+","+
+				"city="+"'"+p.getCity()+"'"+","+
+				"country="+"'"+p.getCountry()+"')";
+	
+	return template.update(updateData);
+}
 
 //public int deleteEmployee(Person e) {
 //	String query = "delete from employee where id='" + e.getId() + "' ";
@@ -70,8 +80,7 @@ public class Databaseinfo {
 		return null;
 	}
 
-	public void updatePerson(Person p) {
-		// TODO Auto-generated method stub
+	
 		
-	}
+	
 }
