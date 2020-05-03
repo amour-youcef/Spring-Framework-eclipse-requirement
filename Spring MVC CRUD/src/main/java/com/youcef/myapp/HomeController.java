@@ -45,7 +45,7 @@ public class HomeController {
 	@RequestMapping("/editperson/{id}")
 	public ModelAndView edit(@PathVariable int id) {
 		 Person p = di.personById(id);
-		return new ModelAndView("redirect:/viewperson");
+		return new ModelAndView("editpersonform","command",p);
 	}
 	/* It update model object*/
 	@RequestMapping(value="/udperson",method=RequestMethod.POST)
