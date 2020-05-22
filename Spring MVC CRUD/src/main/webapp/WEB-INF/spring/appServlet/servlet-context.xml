@@ -40,7 +40,7 @@
 	</beans:bean>
 
 	<beans:bean id="dbi" class="com.youcef.myapp.Databaseinfo">
-		<beans:property name="jdbcTemplate" ref="jdbcTemplate"></beans:property>
+		<beans:property name="template" ref="template"></beans:property>
 	</beans:bean>
 
 </beans:beans>

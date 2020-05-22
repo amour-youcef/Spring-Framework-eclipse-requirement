@@ -53,4 +53,12 @@ public class HomeController {
 		di.updatePerson(p);
 		return new ModelAndView("redirect:/viewperson");
 	}
+	
+	
+	@RequestMapping(value="/deleteperson",method=RequestMethod.GET)
+	public ModelAndView deleteperson(@PathVariable int id) {
+		di.deletePerson(id);
+		return new ModelAndView("redirect:/viewperson");
+	}
+	
 }

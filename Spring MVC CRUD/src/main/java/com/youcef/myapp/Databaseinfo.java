@@ -29,8 +29,8 @@ public class Databaseinfo {
 	}
 	
 	
-	public void updatePerson(Person p) {
-		// TODO Auto-generated method stub
+	public int updatePerson(Person p) {
+			// TODO Auto-generated method stub
 		String updateData="update person set" +
 				"fname="+"'"+p.getFname()+"'"+","+
 				"lname="+"'"+p.getLname()+"'"+","+
@@ -80,7 +80,11 @@ public class Databaseinfo {
 		return null;
 	}
 
-	
+	public void deletePerson(int id) {
+		// TODO Auto-generated method stub
 		
+	}
+
+	
 	
 }
